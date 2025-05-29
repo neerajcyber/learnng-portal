@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Courses</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./header.css" rel="stylesheet" >
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .header {
+            background: white;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e9ecef;
+            margin-bottom: 2rem;
+        }
+        
+        .nav-breadcrumb {
+            color: #6c757d;
+            font-size: 0.875rem;
+        }
+        
+        .nav-breadcrumb .active {
+            color: #212529;
+            font-weight: 600;
+        }
+        
+        .sidebar {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            height: fit-content;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+        
+        .sidebar h6 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #212529;
+        }
+        
+        .sidebar .list-group-item {
+            border: none;
+            padding: 0.5rem 0;
+            background: transparent;
+            color: #6c757d;
+            font-size: 0.875rem;
+        }
+        
+        .sidebar .list-group-item:hover {
+            color: #007bff;
+            background: transparent;
+        }
+        
+        .sidebar .list-group-item.active {
+            color: #007bff;
+            background: transparent;
+            font-weight: 500;
+        }
+        
+        .course-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            height: 100%;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        
+        .course-image {
+            position: relative;
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .course-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .course-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #dc3545;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .course-badge.new {
+            background: #28a745;
+        }
+        
+        .course-badge.free {
+            background: #007bff;
+        }
+        
+        .course-content {
+            padding: 1.25rem;
+        }
+        
+        .course-title {
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 1.4;
+            margin-bottom: 0.75rem;
+            color: #212529;
+        }
+        
+        .course-stats {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.875rem;
+            color: #6c757d;
+        }
+        
+        .course-description {
+            font-size: 0.875rem;
+            color: #6c757d;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        .course-author {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: #6c757d;
+        }
+        
+        .author-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #e9ecef;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #212529;
+        }
+        
+        .sort-dropdown {
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 0.375rem 0.75rem;
+            font-size: 0.875rem;
+            background: white;
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+        <!-- Header section -->
+
+  <!-- Promo Banner -->
+    <div class="promo-banner">
+        <div class="container">
+            Brand new Course Package released! Get 30% off your first purchase with code "Eduma" 
+            <a href="#">Find out more!</a>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="#">
+                    <div class="logo-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <span class="logo-text">
+                        <span class="highlight">Online</span>Learning
+                    </span>
+                </a>
+
+                <!-- Mobile menu toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Navigation Menu -->
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Courses
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                                <li><a class="dropdown-item" href="#">Data Science</a></li>
+                                <li><a class="dropdown-item" href="#">Design</a></li>
+                                <li><a class="dropdown-item" href="#">Business</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">About Us</a></li>
+                                <li><a class="dropdown-item" href="#">Contact</a></li>
+                                <li><a class="dropdown-item" href="#">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Backend Demo</a>
+                        </li>
+                    </ul>
+
+                    <!-- Header Actions -->
+                    <div class="header-actions">
+                        <button class="search-icon" title="Search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        
+                        <button class="cart-icon cart-badge" title="Shopping Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge">0</span>
+                        </button>
+                        
+                        <button class="btn login-btn">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header Section End -->
+
+    <!-- Header -->
+    <div class="header">
+        <div class="container-fluid">
+            <div class="nav-breadcrumb">
+                <span>Home</span> > <span>Courses</span> > <span class="active">Business</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3 col-md-4">
+                <div class="sidebar">
+                    <h6>All categories</h6>
+                    <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action active">
+                            <i class="fas fa-briefcase me-2"></i>Business
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-chart-line me-2"></i>Business Strategy
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-comments me-2"></i>Communication
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-rocket me-2"></i>Entrepreneurship
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-palette me-2"></i>Design
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-code me-2"></i>Developer
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-heart me-2"></i>Health
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-laptop me-2"></i>IT
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-bullhorn me-2"></i>Marketing
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-camera me-2"></i>Photography
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-chalkboard-teacher me-2"></i>Teaching Online
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-cog me-2"></i>Technology
+                        </a>
+                    </div>
+
+                    <!-- Popular Courses Section -->
+                    <div class="mt-4">
+                        <h6>Popular courses</h6>
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item border-0 p-2">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <div style="width: 40px; height: 40px; background: #007bff; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                            <i class="fas fa-graduation-cap text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="fw-medium" style="font-size: 0.8rem;">Introduction LearnPress - LMS Plugin</div>
+                                        <div class="text-muted" style="font-size: 0.75rem;">$49</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item border-0 p-2">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <div style="width: 40px; height: 40px; background: #28a745; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                            <i class="fas fa-code text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="fw-medium" style="font-size: 0.8rem;">Create an LMS Website with LearnPress</div>
+                                        <div class="text-muted" style="font-size: 0.75rem;">Free</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item border-0 p-2">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <div style="width: 40px; height: 40px; background: #dc3545; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                            <i class="fas fa-users text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="fw-medium" style="font-size: 0.8rem;">How To Sell In-Person Course With LearnPress</div>
+                                        <div class="text-muted" style="font-size: 0.75rem;">$89</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9 col-md-8">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <h1 class="section-title">Business</h1>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="text-muted" style="font-size: 0.875rem;">Newly published</span>
+                        <select class="sort-dropdown">
+                            <option>Newest</option>
+                            <option>Popular</option>
+                            <option>Rating</option>
+                            <option>Price</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Course Grid -->
+                <div class="row g-4">
+                    <!-- Course 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1554774853-719586f82d77?w=400&h=250&fit=crop&crop=center" alt="Course">
+                                <div class="course-badge">Hot</div>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">How to Create An Online Course</h3>
+                                <div class="course-stats">
+                                    <span><i class="fas fa-users me-1"></i>15 Students</span>
+                                    <span><i class="fas fa-clock me-1"></i>11 Lessons</span>
+                                </div>
+                                <p class="course-description">
+                                    The course walks through of about 
+                                    instructional design, and offers key 
+                                    resources for further learning.
+                                </p>
+                                <div class="course-author">
+                                    <div class="author-avatar"></div>
+                                    <span>by <strong>Keny White</strong> in Business</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop&crop=center" alt="Course">
+                                <div class="course-badge">Hot</div>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">Online Course Creation Secrets</h3>
+                                <div class="course-stats">
+                                    <span><i class="fas fa-users me-1"></i>10 Students</span>
+                                    <span><i class="fas fa-clock me-1"></i>3 Lessons</span>
+                                </div>
+                                <p class="course-description">
+                                    Share out the most important 
+                                    frameworks and effective 
+                                    methodologies for you...
+                                </p>
+                                <div class="course-author">
+                                    <div class="author-avatar"></div>
+                                    <span>by <strong>Keny White</strong> in Business</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&crop=center" alt="Course">
+                                <div class="course-badge">Hot</div>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">Launch Your Own Online School and Increase Your...</h3>
+                                <div class="course-stats">
+                                    <span><i class="fas fa-users me-1"></i>4 Students</span>
+                                    <span><i class="fas fa-clock me-1"></i>5 Lessons</span>
+                                </div>
+                                <p class="course-description">
+                                    Photographers, Developers, Your 
+                                    Complete Guide to Photographing The 
+                                    most important to...
+                                </p>
+                                <div class="course-author">
+                                    <div class="author-avatar"></div>
+                                    <span>by <strong>Keny White</strong> in Business</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop&crop=center" alt="Course">
+                                <div class="course-badge free">Free</div>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">How To Teach Online Courses Effectively</h3>
+                                <div class="course-stats">
+                                    <span><i class="fas fa-users me-1"></i>4 Students</span>
+                                    <span><i class="fas fa-clock me-1"></i>1 Lesson</span>
+                                </div>
+                                <p class="course-description">
+                                    Photographers & business owner who 
+                                    want to document their own important 
+                                    business journey...
+                                </p>
+                                <div class="course-author">
+                                    <div class="author-avatar"></div>
+                                    <span>by <strong>Derrick Stanford</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 5 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop&crop=center" alt="Course">
+                                <div class="course-badge">$49</div>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">Accelerate Your Course Creation Speed</h3>
+                                <div class="course-stats">
+                                    <span><i class="fas fa-users me-1"></i>5 Students</span>
+                                    <span><i class="fas fa-clock me-1"></i>3 Lessons</span>
+                                </div>
+                                <p class="course-description">
+                                    Learn how to develop engaging courses 
+                                    that entice your typical course 
+                                    creation process.
+                                </p>
+                                <div class="course-author">
+                                    <div class="author-avatar"></div>
+                                    <span>by <strong>Keny White</strong> in Business</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 6 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=400&h=250&fit=crop&crop=center" alt="Course">
+                                <div class="course-badge">$59</div>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">Instructional Design for Learning and Development</h3>
+                                <div class="course-stats">
+                                    <span><i class="fas fa-users me-1"></i>1 Students</span>
+                                    <span><i class="fas fa-clock me-1"></i>5 Lessons</span>
+                                </div>
+                                <p class="course-description">
+                                    The science of instruction can 
+                                    substantially improve your learning or 
+                                    course design skill.
+                                </p>
+                                <div class="course-author">
+                                    <div class="author-avatar"></div>
+                                    <span>by <strong>Keny White</strong> in Business</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 7 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop&crop=center" alt="Course">
+                                <div class="course-badge">$49</div>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">Build a Six-Figure Online Business Selling Knowledge</h3>
+                                <div class="course-stats">
+                                    <span><i class="fas fa-users me-1"></i>6 Students</span>
+                                    <span><i class="fas fa-clock me-1"></i>5 Lessons</span>
+                                </div>
+                                <p class="course-description">
+                                    This will give you how to develop your 
+                                    first Digital Download, or the Next 
+                                    One, or the Next One...
+                                </p>
+                                <div class="course-author">
+                                    <div class="author-avatar"></div>
+                                    <span>by <strong>ThimPress</strong><br>Online Marketing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 8 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=250&fit=crop&crop=center" alt="Course">
+                                <div class="course-badge">$79</div>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">Easy Zuzu Foundation</h3>
+                                <div class="course-stats">
+                                    <span><i class="fas fa-users me-1"></i>5 Students</span>
+                                    <span><i class="fas fa-clock me-1"></i>5 Lessons</span>
+                                </div>
+                                <p class="course-description">
+                                    Learn how to use WordPress HTML, 
+                                    Themes for specific content 
+                                    management with some...
+                                </p>
+                                <div class="course-author">
+                                    <div class="author-avatar"></div>
+                                    <span>by <strong>Derrick Harwood</strong><br>Affiliate Marketing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Course 9 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="course-card">
+                            <div class="course-image">
+                                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=250&fit=crop&crop=center" alt="Course">
+                                <div class="course-badge">$99</div>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">How to Create an Awesome Online Course</h3>
+                                <div class="course-stats">
+                                    <span><i class="fas fa-users me-1"></i>4 Students</span>
+                                    <span><i class="fas fa-clock me-1"></i>8 Lessons</span>
+                                </div>
+                                <p class="course-description">
+                                    Learn step-by-step how to create and launch 
+                                    successful online courses that...
+                                </p>
+                                <div class="course-author">
+                                    <div class="author-avatar"></div>
+                                    <span>by <strong>Keny White</strong> in Business</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

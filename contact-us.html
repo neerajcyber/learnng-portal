@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Your Perspective Matters</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./footer.css" rel="stylesheet" >
+    <link href="./header.css" rel="stylesheet" >
+    <style>
+        /* body {
+            font-family: 'Arial', sans-serif;
+           
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        } */
+        
+        .contact-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            max-width: 1200px;
+            overflow: hidden;
+        }
+        
+        .header-section {
+            /* background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%); */
+            color: black;
+            text-align: center;
+            padding: 60px 40px 40px;
+            position: relative;
+        }
+        
+        .header-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><radialGradient id="a" cx="50%" cy="40%" r="50%"><stop offset="0%" stop-color="white" stop-opacity="0.1"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient></defs><rect width="100" height="20" fill="url(%23a)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .header-section h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header-section p {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .content-section {
+            padding: 60px 40px;
+        }
+        
+        .section-title {
+            color: #333;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        
+        .description {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+        
+        .contact-info-contact {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .phone-icon {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+        
+        .address-icon {
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+        }
+        
+        .email-icon {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+        }
+        
+        .contact-details h5 {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .contact-details p {
+            color: #666;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        
+        .form-section {
+            background: rgb(236, 239, 251);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-section h3 {
+            color: #333;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .form-control {
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+        
+        .form-label {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .btn-send {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 15px 40px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-send:hover {
+            background: linear-gradient(45deg, #5a6fd8, #6a42a0);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .circle-1 {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .circle-2 {
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+        
+        .circle-3 {
+            width: 60px;
+            height: 60px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-section {
+                padding: 40px 20px 30px;
+            }
+            
+            .header-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header-section p {
+                font-size: 1.4rem;
+            }
+            
+            .content-section {
+                padding: 40px 20px;
+            }
+            
+            .contact-info-contact,
+            .form-section {
+                padding: 30px 20px;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+       <!-- Header section -->
+
+  <!-- Promo Banner -->
+    <div class="promo-banner">
+        <div class="container">
+            Brand new Course Package released! Get 30% off your first purchase with code "Eduma" 
+            <a href="#">Find out more!</a>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="#">
+                    <div class="logo-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <span class="logo-text">
+                        <span class="highlight">Online</span>Learning
+                    </span>
+                </a>
+
+                <!-- Mobile menu toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Navigation Menu -->
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Courses
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                                <li><a class="dropdown-item" href="#">Data Science</a></li>
+                                <li><a class="dropdown-item" href="#">Design</a></li>
+                                <li><a class="dropdown-item" href="#">Business</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">About Us</a></li>
+                                <li><a class="dropdown-item" href="#">Contact</a></li>
+                                <li><a class="dropdown-item" href="#">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Backend Demo</a>
+                        </li>
+                    </ul>
+
+                    <!-- Header Actions -->
+                    <div class="header-actions">
+                        <button class="search-icon" title="Search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        
+                        <button class="cart-icon cart-badge" title="Shopping Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge">0</span>
+                        </button>
+                        
+                        <button class="btn login-btn">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header Section End -->
+    <div class="container-fluid p-0">
+        <div class="contact-container">
+            <!-- Header Section -->
+            <div class="header-section">
+                <div class="floating-elements">
+                    <div class="floating-circle circle-1"></div>
+                    <div class="floating-circle circle-2"></div>
+                    <div class="floating-circle circle-3"></div>
+                </div>
+                <p class="mb-2" style="font-size: 1.0rem; opacity: 0.9;">CONTACT US</p>
+                <h1>Your perspective is invaluable to us.</h1>
+                <p>We eagerly await your input.</p>
+            </div>
+            
+            <!-- Content Section -->
+            <div class="content-section">
+                <div class="row">
+                    <!-- Left Column - Contact Info -->
+                    <div class="col-lg-6 mb-5">
+                        <h2 class="section-title">We're Here To Help!</h2>
+                        <h3 style="color: #333; font-size: 2rem; margin-bottom: 30px;">Got questions or feedback?</h3>
+                        
+                        <p class="description">
+                            Our dedicated support team is available to assist you with any inquiries or concerns you 
+                            may have. We strive to provide prompt and helpful assistance to ensure your learning 
+                            experience with us is seamless and enjoyable.
+                        </p>
+                        
+                        <div class="contact-info-contact">
+                            <div class="contact-item">
+                                <div class="contact-icon phone-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h5>Call us directly?</h5>
+                                    <p>+1 234 567 8910</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon address-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h5>Address</h5>
+                                    <p>Howard Street, San Francisco</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon email-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h5>Email</h5>
+                                    <p>contact@eduma.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column - Contact Form -->
+                    <div class="col-lg-6">
+                        <div class="form-section">
+                            <h3>Get in touch</h3>
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name *</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="question" class="form-label">Question *</label>
+                                    <textarea class="form-control" id="question" rows="6" required></textarea>
+                                </div>
+                                
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-send">
+                                        <i class="fas fa-paper-plane me-2"></i>Send
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+   <!-- Footer Section -->
+
+        <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="newsletter-title">Sign up to receive our latest updates</h2>
+                </div>
+                <div class="col-lg-6">
+                    <div class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control newsletter-input" placeholder="Your email here" required>
+                            <button class="btn newsletter-btn" type="submit">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sidebar Buttons -->
+    <div class="sidebar-buttons">
+        <a href="#" class="sidebar-btn">
+            <i class="fas fa-layer-group"></i>
+            <span>Demos</span>
+        </a>
+        <a href="#" class="sidebar-btn">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Buy Now</span>
+        </a>
+    </div>
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <!-- Get in touch -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5>Get in touch</h5>
+                        
+                        <div class="contact-info">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h6>Call us directly?</h6>
+                                <p>+1 234 567 8910</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h6>Address</h6>
+                                <p>Howard Street, San Francisco</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h6>Email</h6>
+                                <p>contact@eduma.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Need some help -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5>Need some help?</h5>
+                        <ul>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Popular subjects -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5>Popular subjects</h5>
+                        <ul>
+                            <li><a href="#">Developer</a></li>
+                            <li><a href="#">Marketing</a></li>
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Design</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="col-lg-5 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5>Need some help?</h5>
+                        
+                        <a href="#" class="social-item">
+                            <div class="social-icon youtube">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <div class="social-info">
+                                <div class="platform">Youtube</div>
+                                <div class="subscribers">2.3M Subcribe</div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="social-item">
+                            <div class="social-icon facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div class="social-info">
+                                <div class="platform">Facebook</div>
+                                <div class="subscribers">2.3M Subcribe</div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="social-item">
+                            <div class="social-icon instagram">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="social-info">
+                                <div class="platform">Instagram</div>
+                                <div class="subscribers">2.3M Subcribe</div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="social-item">
+                            <div class="social-icon twitter">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div class="social-info">
+                                <div class="platform">Twitter</div>
+                                <div class="subscribers">2.3M Subcribe</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Footer -->
+    <div class="bottom-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-md-6 mb-3 mb-lg-0">
+                    <a href="#" class="footer-logo">EDUMA</a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+                    <div class="footer-links">
+                        <a href="#">Terms of use</a>
+                        <a href="#">Privacy policy</a>
+                        <a href="#">Cookies policy</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+                    <p class="copyright">© 2024 Eduma All rights reserved.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="language-currency">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                English
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Spanish</a></li>
+                                <li><a class="dropdown-item" href="#">French</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                USD
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">USD</a></li>
+                                <li><a class="dropdown-item" href="#">EUR</a></li>
+                                <li><a class="dropdown-item" href="#">GBP</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Footer Section End -->
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const question = document.getElementById('question').value;
+            
+            // Simple validation
+            if (name && email && question) {
+                // Show success message
+                alert('Thank you for your message! We\'ll get back to you soon.');
+                
+                // Reset form
+                this.reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+        
+        // Add smooth scrolling animation
+        document.querySelectorAll('.contact-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+        
+        // Add focus effects to form inputs
+        const formInputs = document.querySelectorAll('.form-control');
+        formInputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

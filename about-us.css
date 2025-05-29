@@ -1,0 +1,400 @@
+/* Testimonials Section */
+        .testimonials-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .section-badge {
+            color: #888;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #333;
+        }
+        
+        .section-title .highlight {
+            color: #2196f3;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .testimonial-info h5 {
+            margin: 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-info span {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-text {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+        
+        .testimonial-stars {
+            color: #ffc107;
+            font-size: 1.2rem;
+        }
+        
+        .trust-section {
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .trust-badge {
+            background: #4caf50;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .trust-text {
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        /* Instructors Section */
+        .instructors-section {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .instructor-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .instructor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .instructor-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .instructor-info {
+            padding: 30px 25px;
+            text-align: center;
+        }
+        
+        .instructor-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .instructor-stats {
+            color: #666;
+            margin-bottom: 25px;
+        }
+        
+        .view-portfolio-btn {
+            background: transparent;
+            border: 2px solid #ddd;
+            color: #333;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .view-portfolio-btn:hover {
+            background: #2196f3;
+            border-color: #2196f3;
+            color: white;
+        }
+        
+        .carousel-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        
+        .carousel-nav {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .carousel-nav button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            background: white;
+            color: #666;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-nav button:hover {
+            background: #2196f3;
+            border-color: #2196f3;
+            color: white;
+        }
+        
+        .view-all-btn {
+            background: transparent;
+            border: 2px solid #ddd;
+            color: #333;
+            padding: 15px 35px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .view-all-btn:hover {
+            background: #2196f3;
+            border-color: #2196f3;
+            color: white;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #2196f3 0%, #21cbf3 100%);
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-badge {
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-btn {
+            background: white;
+            color: #2196f3;
+            padding: 18px 40px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            color: #2196f3;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .faq-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .faq-left {
+            padding-right: 30px;
+        }
+        
+        .faq-right {
+            padding-left: 30px;
+        }
+        
+        .accordion-item {
+            background: white;
+            border: none;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        
+        .accordion-button {
+            background: white;
+            border: none;
+            padding: 25px 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #333;
+            box-shadow: none;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background: #e3f2fd;
+            color: #2196f3;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+        
+        .accordion-body {
+            padding: 0 30px 25px;
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .contact-form h4 {
+            margin-bottom: 30px;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .form-control {
+            border: 2px solid #eee;
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: #2196f3;
+            box-shadow: 0 0 0 0.2rem rgba(33, 150, 243, 0.25);
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: #2196f3;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background: #1976d2;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(33, 150, 243, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .faq-left,
+            .faq-right {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .carousel-controls {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
