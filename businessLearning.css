@@ -1,0 +1,460 @@
+.business-details-section {
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    background: white;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 2rem;
+}
+
+.nav-breadcrumb {
+    color: #6c757d;
+    font-size: 0.875rem;
+}
+
+.nav-breadcrumb .active {
+    color: #212529;
+    font-weight: 600;
+}
+
+.business-details-section .leftcontainer {
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.business-details-section .leftcontainer .boxes1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.business-details-section .leftcontainer .boxes1 h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.business-details-section .leftcontainer .boxes1 .forflex {
+    display: flex;
+    align-items: center;
+}
+
+.business-details-section .leftcontainer .boxes1 .forflex a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.business-details-section .leftcontainer .boxes1 .forflex span {
+    margin: 0 1em;
+    height: 20px;
+    border: 1px solid #ccc;
+}
+
+.business-details-section .leftcontainer .boxes1 .forflex p {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    color: #000000ad;
+    align-items: center;
+    gap: 0.2em;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.business-details-section .leftcontainer .boxes1 .image-box {
+    width: 100%;
+    height: 460px;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+}
+
+.business-details-section .leftcontainer .boxes1 .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.business-details-section .leftcontainer .boxes1 .image-box2 {
+    width: 100%;
+    height: 250px;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+}
+
+.business-details-section .leftcontainer .boxes1 .image-box2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.business-details-section .leftcontainer .boxes1 h3 {
+    font-size: 1.8em;
+    font-weight: 650;
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+}
+
+.business-details-section .leftcontainer .boxes1 ul {
+    margin-top: 0.5em;
+    padding-left: 0;
+    width: 100%;
+
+}
+
+.business-details-section .leftcontainer .boxes1 ul li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    list-style: none;
+    font-size: 1em;
+    font-weight: 400;
+    color: #000000b7;
+    margin-bottom: 0.8em;
+}
+
+.business-details-section .leftcontainer .boxes1>p {
+    font-size: 1em;
+    color: #000000b7;
+    text-align: justify;
+}
+
+.business-details-section .leftcontainer .boxes1 hr {
+    margin-bottom: 1em;
+}
+
+
+.instructor-img {
+    width: 140px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #f0f4f9;
+    color: #3b5998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+/* rating css */
+
+.rating-stars i {
+    color: #fbc634;
+    font-size: 20px;
+}
+
+.rating-bar {
+    background-color: #eee;
+    height: 14px;
+    border-radius: 5px;
+}
+
+.rating-label {
+    width: 20px;
+}
+
+.rating-value {
+    width: 20px;
+    text-align: right;
+}
+
+/* student list  */
+.profile-card {
+    text-align: center;
+    min-width: 120px;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+}
+
+.profile-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.profile-progress {
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+/* rightcontainer */
+
+.business-details-section .rightcontainer {
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+}
+
+.business-details-section .rightcontainer .addtocartbox {
+    position: sticky;
+    top: -40%;
+}
+
+.business-details-section .rightcontainer .addtocartbox .card>p {
+    margin-top: 1em;
+    font-size: 0.9em;
+}
+
+/* cart buttobn */
+.info-icon {
+    color: #1685FF;
+    font-size: 18px;
+    width: 24px;
+}
+
+.info-label {
+    color: #333;
+}
+
+.info-value {
+    font-weight: 600;
+}
+
+.info-row {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.btn-blue {
+    background-color: #1685FF;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.btn-blue:hover {
+    background-color: #0f6fd1;
+    color: white;
+}
+
+.share-toggle-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.share-toggle-icon label {
+    cursor: pointer;
+    color: #000;
+    font-weight: 500;
+}
+
+.share-toggle-icon label:hover {
+    color: #0f6fd1;
+}
+
+.sale-badge {
+    background-color: #ffdede;
+    color: #d10000;
+    font-weight: 600;
+    padding: 4px 8px;
+    font-size: 13px;
+    border-radius: 6px;
+}
+
+.course-box {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.course-thumbnail {
+    width: 110px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.course-title {
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 4px 0;
+}
+
+.course-meta {
+    color: #1685FF;
+    font-weight: 500;
+    font-size: 0.8em;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #d10000;
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+.new-price {
+    color: #1685FF;
+    font-weight: 600;
+}
+
+/* interested  */
+
+.course-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 280px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.course-image {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.category-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #fff;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.course-content {
+    background: #fff;
+    padding: 16px;
+}
+
+.badge-expert {
+    background-color: #f1f3f9;
+    color: #333;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.course-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 12px 0 8px;
+}
+
+.price-old {
+    color: #d10000;
+    text-decoration: line-through;
+}
+
+.price-new {
+    color: #1685FF;
+    font-weight: 600;
+}
+
+.hover-info {
+    background-color: #f1f6ff;
+    padding: 16px;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: bottom 0.4s ease;
+}
+
+.course-card:hover .hover-info {
+    bottom: 0;
+}
+
+.view-btn {
+    background-color: #1685FF;
+    color: #fff;
+    padding: 8px 20px;
+    font-weight: 500;
+    border-radius: 8px;
+    border: none;
+}
+
+.view-btn:hover {
+    background-color: #106ed1;
+}
+
+.info-line {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.info-line i {
+    color: #1685FF;
+    margin-right: 6px;
+}
+
+.course-description {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width:766px){
+    .business-details-section{
+        flex-direction: column;
+    }
+    .business-details-section .leftcontainer {
+        width: 100%;
+    }
+    .business-details-section .rightcontainer {
+        width: 100%;
+    }
+    .course-card{
+        width: 100%;
+    }
+    .business-details-section .leftcontainer .boxes1 .image-box{
+        height: 280px;
+    }
+    .course-box{
+        flex-direction: column;
+    }
+    .course-thumbnail{
+        width: 100%;
+        height: 150px;
+    }
+    .business-details-section .leftcontainer .boxes1 .image-box2{
+        height: 120px;
+    }
+}
