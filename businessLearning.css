@@ -13,7 +13,7 @@
     padding: 1rem 0;
     border-bottom: 1px solid #e9ecef;
     margin-bottom: 2rem;
-    margin-left: 3em;
+    padding-left: 3em;
 }
 
 .nav-breadcrumb {
@@ -436,6 +436,7 @@
 @media only screen and (max-width:766px){
     .business-details-section{
         flex-direction: column;
+        width: 100%;
     }
     .business-details-section .leftcontainer {
         width: 100%;
@@ -458,5 +459,8 @@
     }
     .business-details-section .leftcontainer .boxes1 .image-box2{
         height: 120px;
+    }
+    .header {
+        padding-left: 1em;
     }
 }
