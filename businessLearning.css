@@ -1,5 +1,6 @@
 .business-details-section {
-    width: 100%;
+    width: 94%;
+    margin: auto;
     height: 100%;
     padding: 1em;
     position: relative;
@@ -12,6 +13,7 @@
     padding: 1rem 0;
     border-bottom: 1px solid #e9ecef;
     margin-bottom: 2rem;
+    margin-left: 3em;
 }
 
 .nav-breadcrumb {
