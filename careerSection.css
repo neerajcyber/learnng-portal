@@ -306,3 +306,142 @@
                 grid-template-columns: 1fr;
             }
         }
+        .course-card {
+  position: relative;
+  /* width: 380px;
+  height: 360px; */
+  border: 1px solid #e0e0e5;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+}
+
+.course-image {
+  position: relative;
+}
+
+.course-image img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #f0f1f5;
+  color: #4f4f4f;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.card-content {
+  position: absolute;
+  top: 190px;
+  left: 0;
+  width: 100%;
+  height: 170px;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  background: #ffffff;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+.badge.beginner {
+  background: #e1f5e8;
+  color: #2f8f4e;
+}
+
+.badge.intermediate {
+  background: #e8f3ff;
+  color: #336fae;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #3fa34d;
+}
+
+.title {
+  margin: 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #212121;
+  line-height: 1.2;
+}
+
+.meta {
+  font-size: 13px;
+  color: #555555;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.description {
+  font-size: 14px;
+  color: #444444;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.view-btn {
+  display: inline-block;
+  margin-top: 12px;
+  background: #0066cc;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.default-state {
+  z-index: 1;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hover-state {
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.course-card:hover .default-state {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.course-card:hover .hover-state {
+  opacity: 1;
+  transform: translateY(0);
+}
