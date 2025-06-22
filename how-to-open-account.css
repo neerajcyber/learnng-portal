@@ -1,0 +1,57 @@
+        .courses-title {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .courses-title span {
+            color: #0d6efd;
+        }
+        
+        .registration-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+        
+        .content-container {
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+        
+        .image-container {
+            height: 100%;
+            display: flex;
+        }
+        
+        .registration-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.75rem;
+        }
+        
+        .content-area {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .alert-warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffecb5;
+            color: #664d03;
+        }
+        
+        @media (max-width: 768px) {
+            .content-area {
+                padding: 1.5rem;
+            }
+            
+            .registration-image {
+                max-height: 300px;
+            }
+        }
